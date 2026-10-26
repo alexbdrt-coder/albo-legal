@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Albo Patrimoine — Politique de confidentialité</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 4rem;
+         font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         color: #1a1a1a; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e8e8e8; background: #16181c; }
+    a { color: #7cc4ff; } th { background: #22262c; } td, th { border-color: #333a42; } }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin-bottom: .25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.2rem; }
+  .sub { color: #666; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  td, th { border: 1px solid #ddd; padding: .5rem .6rem; text-align: left; vertical-align: top; }
+  th { background: #f4f4f4; font-weight: 600; }
+  code { font-size: .9em; background: rgba(127,127,127,.15); padding: .1em .35em; border-radius: 3px; }
+  footer { margin-top: 3rem; font-size: .85rem; color: #666; border-top: 1px solid #ddd; padding-top: 1rem; }
+</style>
+</head>
+<body>
+
+<h1>Politique de confidentialité — Albo Patrimoine</h1>
+<p class="sub">Dernière mise à jour : 26 octobre 2026</p>
+
+<p><strong>Albo Patrimoine</strong> est un outil <strong>personnel et privé</strong> de suivi de
+patrimoine. Il n'est pas ouvert au public, ne propose aucun service à des tiers et ne
+collecte aucune donnée concernant d'autres personnes que son unique utilisateur.</p>
+
+<h2>1. Responsable du traitement</h2>
+<table>
+  <tr><th>Responsable</th><td>Alexandre — particulier, à titre strictement personnel et non commercial</td></tr>
+  <tr><th>Contact</th><td><a href="mailto:alexbdrt@gmail.com">alexbdrt@gmail.com</a></td></tr>
+  <tr><th>Hébergement</th><td>Serveur personnel auto-hébergé, situé en France, chez le responsable du traitement</td></tr>
+</table>
+
+<h2>2. Données traitées</h2>
+<p>Le service lit, en <strong>lecture seule</strong>, des informations de comptes dont
+l'utilisateur est lui-même le titulaire :</p>
+<table>
+  <tr><th>Catégorie</th><th>Contenu</th><th>Origine</th></tr>
+  <tr>
+    <td>Comptes bancaires</td>
+    <td>Identification du compte (IBAN, intitulé), solde, liste des opérations (date, libellé, montant, devise)</td>
+    <td>Établissements bancaires de l'utilisateur, via Enable Banking (agrégateur agréé AISP)</td>
+  </tr>
+  <tr>
+    <td>Comptes-titres</td>
+    <td>Positions (instrument, quantité, prix), historique des transactions, valeur du portefeuille</td>
+    <td>API Trading 212, avec la clé de l'utilisateur, en lecture seule</td>
+  </tr>
+  <tr>
+    <td>Données techniques</td>
+    <td>Horodatage des collectes, journaux d'exécution, statut de chaque source</td>
+    <td>Générées localement par le service</td>
+  </tr>
+</table>
+<p>Aucune donnée sensible au sens de l'article 9 du RGPD n'est traitée. Aucune donnée n'est
+collectée auprès de tiers autres que les établissements de l'utilisateur.</p>
+
+<h2>3. Finalité et base légale</h2>
+<p><strong>Finalité unique</strong> : produire un état consolidé du patrimoine de l'utilisateur
+(soldes, positions, évolution) et en conserver l'historique.<br>
+<strong>Base légale</strong> : l'exécution du service au bénéfice de son unique utilisateur, sur
+son instruction et avec son consentement, renouvelé auprès de chaque banque (art. 6.1.a et 6.1.b RGPD).</p>
+
+<h2>4. Destinataires — aucun partage</h2>
+<p>Les données collectées <strong>ne sont ni vendues, ni louées, ni transmises à des tiers</strong>,
+et ne sont utilisées à aucune fin publicitaire, statistique ou commerciale.</p>
+<p>Trois intervenants techniques y accèdent strictement dans la limite nécessaire :</p>
+<ul>
+  <li><strong>Enable Banking</strong> (agrégateur de comptes de paiement agréé, agissant comme
+      prestataire de services d'information sur les comptes) : transmet les données bancaires
+      à la demande du service, sur consentement explicite de l'utilisateur auprès de sa banque.</li>
+  <li><strong>Trading 212</strong> : expose au service les seules données du compte de l'utilisateur,
+      en lecture seule.</li>
+  <li><strong>Hébergeur du serveur personnel</strong> : l'utilisateur lui-même. Les données sont
+      stockées sur une machine qu'il administre.</li>
+</ul>
+<p>Aucun sous-traitant, aucun service d'analyse d'audience, aucun cookie publicitaire, aucun
+traceur n'est utilisé. Aucune donnée ne quitte l'Union européenne.</p>
+
+<h2>5. Sécurité</h2>
+<ul>
+  <li>Communications chiffrées (HTTPS) avec les établissements et l'agrégateur.</li>
+  <li>Clés d'accès stockées dans un coffre chiffré, jamais en clair dans les journaux.</li>
+  <li>Accès au serveur restreint à l'utilisateur ; services exposés réduits au minimum.</li>
+  <li>Sauvegardes chiffrées (restic) des données et de leur configuration.</li>
+</ul>
+
+<h2>6. Durée de conservation</h2>
+<p>Les données sont conservées tant que le service est utilisé, afin de produire l'historique
+patrimonial. L'utilisateur peut les supprimer à tout moment (voir §7). Les journaux techniques
+sont purgés automatiquement après rotation.</p>
+
+<h2>7. Droits de l'utilisateur</h2>
+<p>Conformément aux articles 15 à 22 du RGPD, l'utilisateur dispose des droits d'accès, de
+rectification, d'effacement, de limitation, d'opposition et de portabilité. Ces droits s'exercent
+par simple demande à l'adresse de contact ci-dessus ; la suppression est effective immédiatement,
+les données étant stockées sur un serveur dont l'utilisateur a le contrôle direct.</p>
+<p>Réclamation possible auprès de la <abbr title="Commission nationale de l'informatique et des libertés">CNIL</abbr>
+(<a href="https://www.cnil.fr" rel="noopener">www.cnil.fr</a>).</p>
+
+<h2>8. Retrait du consentement bancaire</h2>
+<p>Le consentement donné à une banque pour la lecture des comptes est valable <strong>90 jours</strong>
+et doit être renouvelé. Il peut être retiré à tout moment depuis l'espace client de la banque
+concernée, ou depuis l'interface d'Enable Banking. Le retrait interrompt immédiatement toute
+nouvelle collecte pour le compte concerné.</p>
+
+<h2>9. Modifications</h2>
+<p>Toute évolution de cette politique sera publiée sur cette page, avec sa date de mise à jour.</p>
+
+<footer>
+  Albo Patrimoine — service personnel, non commercial. Aucune donnée personnelle n'est collectée
+  sur les visiteurs de cette page.
+</footer>
+
+</body>
+</html>
